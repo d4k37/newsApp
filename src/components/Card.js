@@ -11,10 +11,10 @@ const Card = () => {
                 />
             </View>
             <View style={styles.titleWrapper}>
-                <Text>Textinho</Text>
+                <Text style={styles.title}>Cirurgia</Text>
             </View>
             <View style={styles.descriptionWrapper}>
-                <Text>Descrição do texto</Text>
+                <Text style={styles.description}>Menina gasta 50 mil para ficar parecida com um dragão</Text>
             </View>
         </View>
     )
@@ -52,5 +52,13 @@ const styles =  StyleSheet.create({
     image:{
         height: '100%',
         width: "100%"
+    },
+    title:{
+        fontFamily: 'Ubuntu-Bold',
+        fontSize: 20
+    },
+    description:{
+        fontFamily: 'Ubuntu',
+        fontSize: 10
     }
 })
