@@ -1,18 +1,17 @@
 import React  from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, StyleSheet, } from 'react-native'
 import Card from '../components/Card'
 import Header from '../components/Header'
 
-const NewsListScreen  = () => {
+const NewsListScreen  = props => {
     return(
-        <View>
-       
-        <Card />
-      </View>
+        
+         <Card navigation={props.navigation} />
+        
     )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
     
 })
 

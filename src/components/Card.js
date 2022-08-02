@@ -1,9 +1,10 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons'
 
-const Card = () => {
+const Card = props => {
     return(
+        <TouchableOpacity onPress={()=> props.navigation.navigate('NewsDetails')}>
         <View style={styles.card}>
             <View style={styles.imageWrapper}>
                 <Image 
@@ -19,6 +20,7 @@ const Card = () => {
                 <Text style={styles.description}>Menina gasta 50 mil para ficar parecida com um dragão</Text>
             </View>
         </View>
+        </TouchableOpacity>
     )
 }
 
