@@ -1,10 +1,11 @@
-import react, {useState} from 'react'
+import React, {useState} from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/components/Header'
 import Card from './src/components/Card'
 import * as Font from 'expo-font'
 import {AppLoading} from 'expo'
+import NewsListScreen from './src/screens/NewsListScreen';
 
  const loadFonts = () => {
   return Font.loadAsync({
@@ -17,20 +18,19 @@ export default function App() {
 
   const [fontLoaded, setFontLoaded] = useState(false)
 
-  if(!fontLoaded){
-    return (
-      <AppLoading
-      startAsync={loadFonts}
-      onFinish={()=> setFontLoaded(true)}
-      />
-    )
-  }
+  // if(!fontLoaded){
+  //   return (
+  //     <AppLoading
+  //     startAsync={loadFonts}
+  //     onFinish={()=> setFontLoaded(true)}
+  //     />
+  //   )
+  // }
 
   return (
-          <View>
-            <Header/>
-            <Card />
-          </View>
+        
+            <NewsListScreen />
+          
   );
 }
 
