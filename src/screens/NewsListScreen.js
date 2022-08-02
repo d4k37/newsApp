@@ -6,7 +6,7 @@ import Header from '../components/Header'
 const NewsListScreen  = () => {
     return(
         <View>
-        <Header/>
+       
         <Card />
       </View>
     )
